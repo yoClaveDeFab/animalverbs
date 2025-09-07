@@ -3,114 +3,142 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Animal Verbs — De cotorrear a viborear</title>
-  <meta name="description" content="Zoomorfismo en verbos del español: un estudio semántico y dialectológico. Betsy Castillo y Dinorah Montiel." />
+  <title>Verbos — Animal Verbs</title>
+  <meta name="description" content="Zoomorfismo en verbos del español: estudio semántico y dialectológico. Betsy Castillo y Dinorah Montiel." />
   <style>
     :root{
-      --ink:#0f172a;        /* texto */
-      --muted:#6b7280;      /* gris leyendas */
-      --line:#e5e7eb;       /* bordes suaves */
-      --pill:#111;
-      --accent:#E66C5C;     /* coral (color del loro) */
-      --bg:#ffffff;
-      --card:#ffffff;
+      --ink:#0f172a;        /* texto principal */
+      --muted:#667085;      /* gris leyendas */
+      --line:#e5e7eb;       /* bordes */
+      --bg:#ffffff;         /* fondo */
+      --card:#ffffff;       /* tarjetas */
+      --shadow: 0 6px 18px rgba(2,6,23,.08);
+      --cotorro:#E66C5C;    /* coral (color del loro) */
+      --cotorro-100:#FCD5C8;/* coral clarito */
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    h1,h2,h3{margin:0 0 .5rem}
-    h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1}
-    h2{font-size:1.6rem}
+    html,body{margin:0;background:var(--bg);color:var(--ink);
+      font:16px/1.55 Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif}
+    h1,h2,h3{margin:0 0 .6rem}
+    h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05}
+    h2{font-size:1.5rem}
     h3{font-size:1.2rem}
     a{color:inherit}
+
     .wrap{max-width:1100px;margin:0 auto;padding:2rem 1.25rem}
-    header.hero{padding:3rem 1.25rem 1rem;border-bottom:1px solid var(--line)}
-    header .kicker{letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;font-size:.9rem}
-    .chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
-    .chip{display:inline-flex;align-items:center;gap:.5rem;background:#f8fafc;border:1px solid var(--line);padding:.35rem .6rem;border-radius:999px;font-weight:600}
-    .chip i{display:inline-block;width:.5rem;height:.5rem;border-radius:50%}
-    .chip.red i{background:#ef4444}
-    .chip.blue i{background:#2563eb}
-    .chip.teal i{background:#0ea5a4}
-    .chip.indigo i{background:#6366f1}
 
-    /* Cards y grid */
-    .grid{display:grid;gap:1.25rem}
-    @media (min-width:960px){ .grid{grid-template-columns:1.2fr .9fr} }
-    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem}
-    .legend{color:var(--muted);font-size:.95rem;margin-top:.6rem}
+    /* Tabs superiores */
+    .tabs{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0 1.5rem}
+    .tab{
+      display:inline-flex;align-items:center;gap:.55rem;
+      padding:.55rem .9rem;border:1px solid var(--line);border-radius:999px;
+      background:#fff;font-weight:700;box-shadow:var(--shadow)
+    }
+    .tab i{width:.55rem;height:.55rem;border-radius:50%;display:inline-block}
+    .tab.active{border-color:var(--cotorro); color:var(--cotorro)}
+    .tab.active i{background:var(--cotorro)}
+    .tab i{background:#e2e8f0}
 
-    /* Tags / badges */
-    .tags{display:flex;gap:.5rem;margin:.5rem 0 0}
-    .tag{border:1px solid var(--line);padding:.2rem .5rem;border-radius:999px;font-size:.85rem;background:#f8fafc}
+    /* Grid principal del bloque */
+    .grid{display:grid;gap:1.2rem}
+    @media (min-width:980px){ .grid{grid-template-columns:1.1fr .95fr} }
 
-    /* Notas */
-    .notes ul{margin:.4rem 0 0 1.1rem}
-    .notes li+li{margin-top:.35rem}
+    /* Tarjetas */
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1rem;box-shadow:var(--shadow)}
+    .card h3{margin:.4rem 0 .25rem}
 
-    /* Navegación interna simple */
-    nav.local{display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0 2rem}
-    nav.local a{padding:.4rem .7rem;border:1px solid var(--line);border-radius:999px;text-decoration:none}
-    nav.local a.active{border-color:var(--accent);color:var(--accent);font-weight:700}
+    /* Etiquetas / chips */
+    .pills{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0 0}
+    .pill{border:1px solid var(--line);background:#f8fafc;padding:.25rem .6rem;border-radius:999px;font-size:.85rem}
+    .badge{display:inline-block;font-size:.82rem;color:#fff;background:var(--cotorro);padding:.12rem .5rem;border-radius:.4rem}
+
+    /* Bloques interiores */
+    .legend{color:var(--muted);font-size:.95rem;margin-top:.55rem}
+    .examples{border-left:4px solid var(--cotorro);padding-left:.75rem;margin:.35rem 0}
+    .examples li{margin:.25rem 0}
+
+    /* Imagen del diagrama */
+    .diagram{width:100%;height:auto;border-radius:14px;display:block}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line);color:var(--muted);padding:1rem 0;margin-top:2rem}
   </style>
 </head>
 
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <div class="kicker">Proyecto • Animal Verbs</div>
-      <h1>De cotorrear a viborear</h1>
-      <p style="margin:.5rem 0 0;max-width:65ch">
-        Zoomorfismo en verbos del español: un estudio semántico y dialectológico. <strong>Betsy Castillo</strong> y <strong>Dinorah Montiel</strong>.
-      </p>
+  <main class="wrap">
+    <h1>Verbos</h1>
 
-      <div class="chips" aria-label="Verbos">
-        <span class="chip red"><i></i> Cotorrear</span>
-        <span class="chip blue"><i></i> Viborear</span>
-        <span class="chip teal"><i></i> Zorrear</span>
-        <span class="chip indigo"><i></i> Pavonearse</span>
-      </div>
+    <!-- Tabs de navegación (por ahora solo Cotorrear activo) -->
+    <div class="tabs" role="tablist" aria-label="Verbos">
+      <span class="tab active"><i></i> Cotorrear</span>
+      <span class="tab"><i></i> Viborear</span>
+      <span class="tab"><i></i> Zorrear</span>
+      <span class="tab"><i></i> Pavonearse</span>
+      <span class="tab"><i></i> Serpentear</span>
     </div>
-  </header>
 
-  <main class="wrap" id="contenido">
-    <nav class="local" aria-label="Secciones">
-      <a href="#cotorrear" class="active">Cotorrear</a>
-      <a href="#otros">Otros verbos</a>
-    </nav>
-
-    <!-- =========================== COTORREAR =========================== -->
-    <section id="cotorrear" aria-labelledby="h-cotorrear">
+    <!-- ===================== COTORREAR ===================== -->
+    <section id="cotorrear">
       <div class="grid">
-        <!-- Columna izquierda: título + mapa + resumen -->
+        <!-- Columna izquierda: definición + ejemplos -->
         <div class="card">
-          <div style="display:flex;align-items:center;gap:12px">
-            <!-- Ícono (pon tu archivo en la ruta indicada o cambia el src) -->
-            <img src="imgcotorrear.png" alt="Ícono de cotorro" style="width:72px;height:72px;object-fit:contain">
+          <!-- Cabecera con icono -->
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:.25rem">
+            <img src="imgcotorrear.png" alt="Ícono de cotorro" style="width:62px;height:62px;object-fit:contain">
             <div>
-              <h2 id="h-cotorrear" style="margin:0">Cotorrear</h2>
-              <div class="tags">
-                <span class="tag">animal + -ear</span>
-                <span class="tag">coloquial</span>
+              <h2 style="margin:0">Cotorrear</h2>
+              <div class="pills">
+                <span class="pill">animal + -ear</span>
+                <span class="pill">coloquial</span>
               </div>
             </div>
           </div>
 
-          <!-- Mapa -->
-          <div class="card" style="margin-top:1rem">
-            <iframe aria-label="Mapa" id="datawrapper-chart-epHZF"
-              src="https://datawrapper.dwcdn.net/epHZF/7/"
-              scrolling="no" frameborder="0"
-              style="width:0; min-width:100% !important; border:none;"
-              height="368" data-external="1"></iframe>
+          <p><strong>Sentido básico:</strong> conversar mucho o sin contenido relevante; chismear.</p>
+          <div class="pills" style="margin-bottom:.6rem">
+            <span class="pill">Aspecto: durativa/habitual</span>
+            <span class="pill">Voz media/activa</span>
+            <span class="pill">Registro: informal</span>
           </div>
 
-          <!-- Resumen bajo el mapa -->
-          <p class="legend">
-            Distribución dialectal (pmw): <strong>México</strong> 0.67; <strong>El Salvador</strong> 0.36;
-            <strong>Rep. Dominicana</strong> 0.26; <strong>Perú</strong> 0.25; <strong>Colombia</strong> 0.20.
-          </p>
+          <div class="card" style="background:#fff">
+            <h3>Ejemplos de uso</h3>
+            <ul class="examples">
+              <li>“Se quedaron <em>cotorreando</em> toda la tarde.”</li>
+              <li>“Ya andan <em>cotorreando</em> el chisme.”</li>
+              <!-- Si quieres añadir más ejemplos, duplica el <li> -->
+            </ul>
+          </div>
 
-          <!-- Ajuste de alto automático del Datawrapper -->
+          <!-- Diagrama como imagen estática -->
+          <div class="card" style="margin-top:1rem" aria-label="Diagrama prototípico — Cotorrear">
+            <img src="cotorrear-diagrama.png"
+                 class="diagram"
+                 alt="Prototipo de cotorrear con núcleo ‘cotorro’, ‘Hablar animadamente’ al centro; etiquetas Gritar y Echar relajo; óvalos de Bromear y Engañar">
+            <p class="legend">
+              Prototipo: núcleo ‘cotorro’ → hablar animadamente; extensiones:
+              <strong>gritar</strong>, echar relajo, bromear, engañar.
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna derecha: mapa -->
+        <div class="card">
+          <h3>Mapa (CORPES XXI)</h3>
+          <!-- Embed correcto de Datawrapper -->
+          <iframe
+            title="Cotorrear"
+            aria-label="Mapa"
+            id="datawrapper-chart-epHZF"
+            src="https://datawrapper.dwcdn.net/epHZF/7/"
+            scrolling="no" frameborder="0"
+            style="width:0; min-width:100% !important; border:none;"
+            height="420" data-external="1"></iframe>
+
+          <p class="legend">Distribución dialectal (pmw): México 0.67; El Salvador 0.36; Rep. Dominicana 0.26; Perú 0.25; Colombia 0.20.</p>
+
+          <!-- Autosize del iframe de Datawrapper -->
           <script>
             (function(){
               window.addEventListener("message",function(e){
@@ -127,51 +155,21 @@
               });
             })();
           </script>
-        </div>
 
-        <!-- Columna derecha: diagrama + notas -->
-        <div class="">
-          <!-- Diagrama como imagen -->
-          <div class="card" aria-label="Diagrama prototípico — Cotorrear">
-            <!-- Cambia el src al nombre exacto del archivo que subas -->
-            <img src="cotorrear-diagrama.png"
-                 alt="Prototipo de cotorrear con núcleo 'cotorro', 'Hablar animadamente' al centro; etiquetas Gritar y Echar relajo; óvalos de Bromear y Engañar"
-                 style="width:100%;height:auto;border-radius:12px;display:block">
-            <p class="legend">
-              Prototipo: núcleo ‘cotorro’ → hablar animadamente; extensiones:
-              <strong>gritar</strong>, echar relajo, bromear, engañar.
-            </p>
-          </div>
-
-          <!-- Notas -->
-          <div class="card notes" style="margin-top:1rem">
-            <h3 style="margin-top:0">Notas morfológicas y semánticas</h3>
-            <ul>
-              <li><strong>Valores aspectuales (durativa / habitual):</strong>
-                <ul>
-                  <li>“… <strong>cotorreando</strong> todo el día …”</li>
-                  <li>“… según que <strong>cotorreando</strong> … tres días seguidos …”</li>
-                  <li>“… hablando por teléfono y <strong>cotorreando</strong> …”</li>
-                </ul>
-              </li>
-              <li><strong>Proyección conceptual:</strong> rasgos del ave (ruido, gregariedad) → conversación animada / chisme.</li>
-            </ul>
-          </div>
+          <!-- Fallback si el iframe no carga -->
+          <p class="legend" style="margin-top:.6rem">
+            ¿No ves el mapa? Ábrelo aquí:
+            <a href="https://datawrapper.dwcdn.net/epHZF/7/" target="_blank" rel="noopener">datawrapper.dwcdn.net/epHZF/7/</a>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- =========================== OTROS (placeholder) =========================== -->
-    <section id="otros" style="margin-top:3rem">
-      <div class="card">
-        <h2 style="margin-top:0">Otros verbos</h2>
-        <p class="legend">Aquí integraremos <em>viborear</em>, <em>zorrear</em>, <em>pavonearse</em>, etc., con el mismo patrón (ícono · mapa · resumen · diagrama · notas).</p>
+    <footer>
+      <div class="wrap" style="padding:0">
+        © 2025 Animal Verbs — De cotorrear a viborear.
       </div>
-    </section>
+    </footer>
   </main>
-
-  <footer class="wrap" style="border-top:1px solid var(--line);margin-top:2rem;padding-top:1rem;color:var(--muted)">
-    © 2025 Animal Verbs — De cotorrear a viborear.
-  </footer>
 </body>
 </html>
