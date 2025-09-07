@@ -95,18 +95,95 @@
     </section>
 
     <!-- 4) METODOLOGÍA -->
-    <section id="metodologia">
-      <h2>Metodología</h2>
-      <div class="card">
-        <ol>
-          <li><strong>Definición de rasgos</strong> del animal (movimiento, conducta, valoración social).</li>
-          <li><strong>Mapeo semántico</strong> de extensiones metafóricas y metonímicas.</li>
-          <li><strong>Extracción de ocurrencias</strong> y ejemplos en corpus (todas las conjugaciones).</li>
-          <li><strong>Normalización</strong> por millón de palabras y series de tiempo.</li>
-          <li><strong>Dialectología</strong>: distribución por país y registro.</li>
-        </ol>
-      </div>
-    </section>
+    
+<section id="metodologia">
+  <style>
+    /* ===== Metodología Stepper (estilos encapsulados) ===== */
+    .meth-wrap{position:relative}
+    .meth-track{
+      display:flex; gap:16px; overflow:auto; padding:18px 6px 10px;
+      scroll-snap-type:x mandatory;
+    }
+    .meth-card{
+      scroll-snap-align:start;
+      min-width:280px; background:#fff; border:1px solid var(--border);
+      border-radius:16px; padding:18px; box-shadow:var(--shadow); position:relative;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .meth-card:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(0,0,0,.12) }
+    .meth-num{
+      width:36px; height:36px; border-radius:999px; display:grid; place-items:center;
+      background:linear-gradient(135deg,#111,#333); color:#fff; font-weight:800;
+      box-shadow:0 6px 18px rgba(0,0,0,.18); position:relative; z-index:1;
+    }
+    .meth-head{ display:flex; align-items:center; gap:10px; margin-bottom:8px }
+    .meth-title{ font-weight:800 }
+    .meth-desc{ color:var(--muted); font-size:.95rem }
+    /* Conectores entre cards */
+    .meth-rail{ position:absolute; left:0; right:0; top:36px; height:3px; background:linear-gradient(90deg,#e5e7eb,transparent); }
+    .meth-card:before{
+      content:""; position:absolute; top:34px; left:-8px; width:16px; height:3px; background:#e5e7eb;
+    }
+    .meth-card:first-child:before{ display:none }
+    /* Badges para categorías */
+    .badge{ font-size:.72rem; padding:.18rem .45rem; border:1px solid var(--border);
+      border-radius:999px; background:#f8fafc; color:#334155; font-weight:600 }
+    @media (max-width: 760px){
+      .meth-card{ min-width:260px }
+    }
+  </style>
+
+  <h2>Metodología</h2>
+  <div class="card meth-wrap">
+    <div class="meth-rail" aria-hidden="true"></div>
+    <div class="meth-track" role="list">
+      <article class="meth-card" role="listitem">
+        <div class="meth-head">
+          <div class="meth-num">1</div>
+          <div class="meth-title">Selección de verbos</div>
+        </div>
+        <p class="meth-desc">
+          Verbos en <em>-ear</em> con base animal “cercano”, homogéneos morfológicamente y con alta productividad léxica.
+        </p>
+        <div class="badge">criterios formales</div>
+      </article>
+
+      <article class="meth-card" role="listitem">
+        <div class="meth-head">
+          <div class="meth-num">2</div>
+          <div class="meth-title">Rastreo en CORPES</div>
+        </div>
+        <p class="meth-desc">
+          Consulta en CORPES XXI para obtener <strong>frecuencia</strong>, <strong>sentidos</strong> y <strong>distribución geográfica</strong> por país.
+        </p>
+        <div class="badge">datos de corpus</div>
+      </article>
+
+      <article class="meth-card" role="listitem">
+        <div class="meth-head">
+          <div class="meth-num">3</div>
+          <div class="meth-title">Análisis dialectológico</div>
+        </div>
+        <p class="meth-desc">
+          Mapas y gráficas con <em>frecuencias normalizadas</em> para observar predominancia regional y variación temporal.
+        </p>
+        <div class="badge">cartografía</div>
+      </article>
+
+      <article class="meth-card" role="listitem">
+        <div class="meth-head">
+          <div class="meth-num">4</div>
+          <div class="meth-title">Análisis semántico</div>
+        </div>
+        <p class="meth-desc">
+          Identificación de <strong>metáforas</strong>, <strong>aspectualidad</strong> del sufijo <em>-ear</em> (iterativo, incoativo, habitual) y construcción de <strong>prototipos</strong>.
+        </p>
+        <div class="badge">semántica cognitiva</div>
+      </article>
+    </div>
+  </div>
+</section>
+
 
   </main>
 
