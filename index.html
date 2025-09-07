@@ -183,6 +183,173 @@
     </div>
   </div>
 </section>
+    <!-- ========= VERBOS ========= -->
+<section id="verbos" class="container" style="padding-top:40px">
+  <h2>Verbos</h2>
+
+  <style>
+    /* Mini-estilos locales (coherentes con tu tema) */
+    .verb-tabs { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px }
+    .verb-tab { border:1px solid var(--border); border-radius:999px; padding:.5rem .8rem; background:#fff; box-shadow:var(--shadow); cursor:pointer; font-weight:600 }
+    .verb-tab .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:.5rem; vertical-align:middle }
+    .verb-tab[aria-selected="true"]{ outline:2px solid #111; }
+    .verb-panel{ display:none }
+    .verb-panel.active{ display:block; }
+    .grid { display:grid; grid-template-columns: 1.2fr 1fr; gap:22px }
+    .stack { display:grid; gap:12px }
+    .kpi { display:flex; gap:12px; flex-wrap:wrap }
+    .badge{ font-size:.8rem; padding:.18rem .5rem; border:1px solid var(--border); border-radius:999px; background:#f8fafc }
+    .embed { border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff }
+    .embed iframe{ width:100%; height:420px; border:0 }
+    .blockquote{ border-left:4px solid var(--border); padding-left:12px; color:var(--muted) }
+    @media (max-width: 900px){ .grid{ grid-template-columns:1fr } }
+  </style>
+
+  <!-- Tabs -->
+  <nav class="verb-tabs" role="tablist" aria-label="Verbos">
+    <button class="verb-tab" role="tab" data-target="v-cotorrear" aria-selected="true">
+      <span class="dot" style="background: var(--cotorrear)"></span>Cotorrear
+    </button>
+    <button class="verb-tab" role="tab" data-target="v-viborear">
+      <span class="dot" style="background: var(--viborear)"></span>Viborear
+    </button>
+    <button class="verb-tab" role="tab" data-target="v-zorrear">
+      <span class="dot" style="background: var(--zorrear)"></span>Zorrear
+    </button>
+    <button class="verb-tab" role="tab" data-target="v-pavonearse">
+      <span class="dot" style="background: var(--pavonearse)"></span>Pavonearse
+    </button>
+    <button class="verb-tab" role="tab" data-target="v-serpentear">
+      <span class="dot" style="background: var(--serpentear)"></span>Serpentear
+    </button>
+  </nav>
+
+  <!-- Panel: COTORREAR (ejemplo ya relleno a modo de guía) -->
+  <div id="v-cotorrear" class="verb-panel active" role="tabpanel">
+    <div class="grid">
+      <div class="stack">
+        <div class="card">
+          <h3 style="margin-top:0">Cotorrear <span class="badge">animal + -ear</span> <span class="badge">coloquial</span></h3>
+          <p><strong>Sentido básico:</strong> conversar mucho o sin contenido relevante; chismear.</p>
+          <div class="kpi">
+            <span class="badge">Aspecto: habitual/iterativo</span>
+            <span class="badge">Voz media/activa</span>
+            <span class="badge">Registro: informal</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px">Ejemplos de uso</h4>
+          <div class="blockquote">
+            — Se quedaron <em>cotorreando</em> hasta la madrugada.<br>
+            — Ya andan <em>cotorreando</em> el chisme.
+          </div>
+        </div>
+
+        <div class="card embed">
+          <!-- MAPA (Datawrapper / Flourish / Leaflet) -->
+          <!-- Reemplaza el src con tu iframe del mapa de distribución -->
+          <iframe src="IFRAME_AQUI_MAPA_COTORREAR" title="Mapa cotorrear"></iframe>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card embed">
+          <!-- DIAGRAMA / RED SEMÁNTICA -->
+          <iframe src="IFRAME_AQUI_RED_COTORREAR" title="Red semántica cotorrear"></iframe>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 6px">Notas morfológicas</h4>
+          <ul style="margin:0; padding-left:18px">
+            <li>Derivado denominal: <em>cotorra</em> + <strong>-ear</strong>.</li>
+            <li><em>-ear</em> aporta valores de iteratividad/habitualidad.</li>
+          </ul>
+          <div style="margin-top:10px" class="kpi">
+            <a class="badge" href="URL_CORPES_COTORREAR" target="_blank" rel="noopener">CORPES</a>
+            <a class="badge" href="URL_FICHA" target="_blank" rel="noopener">Ficha técnica</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel: VIBOREAR (plantilla con placeholders) -->
+  <div id="v-viborear" class="verb-panel" role="tabpanel">
+    <div class="grid">
+      <div class="stack">
+        <div class="card">
+          <h3 style="margin-top:0">Viborear <span class="badge">var. vivorear</span></h3>
+          <p><strong>Sentido básico:</strong> hablar con malicia, insinuar para perjudicar; chismear con intención.</p>
+          <div class="kpi">
+            <span class="badge">Aspecto: habitual/iterativo</span>
+            <span class="badge">Valor axiológico: negativo</span>
+          </div>
+        </div>
+
+        <div class="card embed">
+          <iframe src="IFRAME_AQUI_MAPA_VIBOREAR" title="Mapa viborear"></iframe>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card embed">
+          <iframe src="IFRAME_AQUI_RED_VIBOREAR" title="Red semántica viborear"></iframe>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 6px">Notas morfológicas</h4>
+          <ul style="margin:0; padding-left:18px">
+            <li><em>víbora</em> + <strong>-ear</strong> (variante: <em>vivorear</em>).</li>
+            <li>Proyección: rasgos de traición/astucia → conducta humana.</li>
+          </ul>
+          <div style="margin-top:10px" class="kpi">
+            <a class="badge" href="URL_CORPES_VIBOREAR" target="_blank" rel="noopener">CORPES</a>
+            <a class="badge" href="URL_FICHA_VIBOREAR" target="_blank" rel="noopener">Ficha técnica</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel: ZORREAR (plantilla) -->
+  <div id="v-zorrear" class="verb-panel" role="tabpanel">
+    <!-- Repite la estructura: resumen + mapa + red + notas + corpus -->
+    <!-- IFRAME_AQUI_MAPA_ZORREAR / IFRAME_AQUI_RED_ZORREAR -->
+  </div>
+
+  <!-- Panel: PAVONEARSE (plantilla) -->
+  <div id="v-pavonearse" class="verb-panel" role="tabpanel">
+    <!-- Repite estructura -->
+  </div>
+
+  <!-- Panel: SERPENTEAR (plantilla) -->
+  <div id="v-serpentear" class="verb-panel" role="tabpanel">
+    <!-- Repite estructura -->
+  </div>
+
+  <script>
+    // Tabs simples + deep-link (#viborear)
+    const tabs = document.querySelectorAll('.verb-tab');
+    const panels = document.querySelectorAll('.verb-panel');
+
+    function activate(id){
+      panels.forEach(p=>p.classList.toggle('active', p.id===id));
+      tabs.forEach(t=>t.setAttribute('aria-selected', t.dataset.target===id));
+      // actualizar hash sin saltar
+      history.replaceState(null, "", "#" + id);
+    }
+
+    tabs.forEach(btn=>{
+      btn.addEventListener('click', ()=> activate(btn.dataset.target));
+    });
+
+    // activar desde hash inicial
+    const hash = location.hash.replace('#','');
+    if(hash && document.getElementById(hash)) activate(hash);
+  </script>
+</section>
+
 
 
   </main>
