@@ -174,13 +174,12 @@
 <button class="verb-tab" data-target="v-vib_serp" id="tab-vib_serp" role="tab">
 <span class="dot" style="background: var(--serpentear)"></span>Viborear/Serpentear
         </button>
-<button class="verb-tab" data-target="v-zorrear" id="tab-zorrear" role="tab">
-<span class="dot" style="background: var(--zorrear)"></span>Zorrear
-        </button>
-<button class="verb-tab" data-target="v-pavonearse" id="tab-pavonearse" role="tab">
-<span class="dot" style="background: var(--pavonearse)"></span>Pavonearse
-        </button>
-<!-- COTORREAR -->
+<button class="verb-tab" role="tab" data-target="v-pavonearse" id="tab-pavonearse">
+  <span class="dot" style="background: #A65DB1"></span>Pavonearse
+</button>
+
+
+        <!-- COTORREAR -->
 <div aria-labelledby="tab-cotorrear" class="verb-panel active" id="v-cotorrear" role="tabpanel">
 <div class="grid">
 <div class="stack">
@@ -294,6 +293,89 @@
 </div>
 </div>
 </div>
+<div id="v-pavonearse" class="verb-panel" role="tabpanel" aria-labelledby="tab-pavonearse">
+  <div class="grid">
+    <!-- Columna izquierda -->
+    <div class="stack">
+      <!-- Encabezado con ícono y chips -->
+      <div class="card">
+        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <!-- Ícono del animal (un solo ícono por bloque) -->
+          <img src="img/iconopavo.png" alt="Ícono pavo real" style="width:64px; height:64px; object-fit:contain;">
+          <h3 style="margin:0; display:flex; align-items:center; gap:12px;">
+            Pavonearse
+            <span style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+              <span class="badge">animal + -ear(se)</span>
+              <span class="badge">coloquial</span>
+            </span>
+          </h3>
+        </div>
+      </div>
+
+      <!-- Resumen dialectológico + mapa -->
+      <div class="card embed" aria-label="Mapa de distribución de 'pavonearse'">
+        <iframe title="Pavonearse" aria-label="Mapa" id="datawrapper-chart-8HPej"
+                src="https://datawrapper.dwcdn.net/8HPej/1/"
+                scrolling="no" frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;" height="368" data-external="1"></iframe>
+        <script type="text/javascript">
+          !function(){"use strict";window.addEventListener("message",(function(a){
+            if(void 0!==a.data["datawrapper-height"]){
+              var e=document.querySelectorAll("iframe");
+              for(var t in a.data["datawrapper-height"])
+                for(var r,i=0;r=e[i];i++)
+                  if(r.contentWindow===a.source){ r.style.height=a.data["datawrapper-height"][t]+"px"; }
+            }}))}
+          ();
+        </script>
+      </div>
+
+      <div class="card">
+        <h4 style="margin:0 0 6px">Distribución y uso</h4>
+        <p style="margin:0">
+          <strong>Pavonearse</strong> es pronominal y expresa ostentación o alarde.
+          Se documenta ampliamente en el español general, sobre todo en crónica, prensa y narrativa,
+          para describir actitudes de exhibición (corporal o simbólica).
+        </p>
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="stack">
+      <!-- Notas y ejemplos -->
+      <div class="card">
+        <h4 style="margin:0 0 6px">Notas morfológicas y semánticas</h4>
+        <ul style="margin:0; padding-left:18px">
+          <li><strong>Formación:</strong> denominal de <em>pavo</em> + sufijo verbal <strong>-ear</strong> con clítico obligatorio <strong>se</strong> (valor pronominal: <em>pavonearse</em>).</li>
+          <li><strong>Proyección conceptual:</strong> despliegue del pavo real → ostentación/vanidad; exhibición de rasgos físicos, poses o logros.</li>
+          <li><strong>Aspecto/registro:</strong> iterativo–durativo; frecuente en registros coloquiales y periodísticos.</li>
+          <li><strong>Ejemplos (fragmentos del corpus):</strong>
+            <ul style="margin:6px 0 0 0; padding-left:18px">
+              <li>“Las primeras <strong>pavoneaban</strong> el aplomo temporal de una conquista...”</li>
+              <li>“... estudiantes modelo que se <strong>pavoneaban</strong> por las aulas con el torso desnudo...”</li>
+              <li>“... cuerpo feminoide <strong>pavoneándote</strong> por las calles...”</li>
+              <li>“... tanques rusos que iban casi <strong>pavoneándose</strong> por esas calles históricas...”</li>
+              <li>“... parecía un palomo de pecho azul <strong>pavoneándose</strong> orgulloso...”</li>
+              <li>“... <strong>se pavoneaba</strong> meneando coquetamente la cabeza...”</li>
+              <li>“... <strong>se pavonea</strong> cuando se reúne con otros cocheros.”</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- (Opcional) Si luego añades diagrama específico para pavonearse, va aquí -->
+      <!--
+      <div class="card embed" aria-label="Diagrama prototípico de 'pavonearse'">
+        <img src="img/img-diagrama-pavonearse.png" alt="Diagrama prototípico de pavonearse" style="width:100%; height:auto; display:block;">
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+
+
+
 <div aria-labelledby="tab-zorrear" class="verb-panel" id="v-zorrear" role="tabpanel">
 <div class="card" style="text-align:center; color:var(--muted)">Completar con mapa, red y notas…</div>
 </div>
