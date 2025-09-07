@@ -1,1 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>De cotorrear a viborear – Zoomorfismo en verbos del español</title>
+  <meta name="description" content="Landing del estudio semántico y dialectológico: De cotorrear a viborear. Zoomorfismo en verbos del español. Autoras: Betsy Castillo y Dinorah Montiel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --text:#111111; --muted:#6b7280; --border:#e5e7eb; --shadow:0 10px 30px rgba(0,0,0,.08);
+      /* Colores distintivos por verbo */
+      --cotorrear:#F28B82; /* coral */
+      --viborear:#1F5C4D; /* verde oscuro */
+      --zorrear:#C97D60; /* ocre zorro */
+      --pavonearse:#298C61; /* jade */
+      --serpentear:#5A8CA0; /* azul petróleo suave */
+      --accent:#111111;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1160px;margin:0 auto;padding:24px}
+    header.hero{padding:64px 0 24px;border-bottom:1px solid var(--border)}
+    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-weight:700;font-size:.82rem;color:var(--muted)}
+    h1{font-family:"Playfair Display",serif;font-weight:800;line-height:1.05;margin:.25em 0 .35em;font-size:clamp(2.2rem,6vw,4.2rem)}
+    .subtitle{font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--muted)}
+    .authors{margin-top:14px;font-weight:600}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);padding:.45rem .7rem;border-radius:999px;background:#fff;box-shadow:var(--shadow)}
+    .chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:18px}
+    .dot{width:10px;height:10px;border-radius:50%}
+    nav.sticky{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border);z-index:40}
+    nav.sticky .navwrap{display:flex;gap:18px;overflow:auto;padding:.6rem .8rem}
+    nav.sticky a{padding:.4rem .7rem;border-radius:999px;border:1px solid transparent}
+    nav.sticky a:hover{border-color:var(--border);background:#fff}
+    section{padding:48px 0;border-bottom:1px solid var(--border)}
+    h2{font-family:"Playfair Display",serif;font-size:clamp(1.6rem,3.2vw,2.2rem);margin:0 0 18px}
+    .two{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+    @media (max-width: 900px){.two{grid-template-columns:1fr;}}
+    .card{border:1px solid var(--border);border-radius:var(--radius);padding:20px;background:#fff;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width: 900px){.grid.cols-3{grid-template-columns:1fr}}
+    figure{margin:0}
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:8px;padding:.2rem .4rem}
+    footer{padding:40px 0;color:var(--muted)}
+    .icon{width:22px;height:22px}
+    .verb-card{display:flex;align-items:flex-start;gap:14px;padding:16px;border:1px solid var(--border);border-radius:14px;background:#fff}
+    .legend{display:flex;flex-wrap:wrap;gap:10px}
+    .legend .chip{box-shadow:none}
+    .embed{aspect-ratio:16/9;border:1px dashed var(--border);border-radius:14px;display:grid;place-items:center;color:var(--muted)}
+    .btn{display:inline-block;border:1px solid var(--border);padding:.7rem 1rem;border-radius:12px;background:#fff;box-shadow:var(--shadow);font-weight:600}
+    .btn:hover{transform:translateY(-1px)}
+  </style>
+</head>
+<body>
+  <header class="hero container">
+    <div class="eyebrow">Proyecto • Animal Verbs</div>
+    <h1>De cotorrear a viborear</h1>
+    <p class="subtitle">Zoomorfismo en verbos del español: un estudio semántico y dialectológico</p>
+    <div class="authors">Betsy Castillo y Dinorah Montiel</div>
+    <div class="chips" aria-label="Lista de verbos analizados">
+      <span class="chip"><span class="dot" style="background:var(--cotorrear)"></span> Cotorrear</span>
+      <span class="chip"><span class="dot" style="background:var(--viborear)"></span> Viborear <small style="color:var(--muted);font-weight:500">(var. vivorear)</small></span>
+      <span class="chip"><span class="dot" style="background:var(--zorrear)"></span> Zorrear</span>
+      <span class="chip"><span class="dot" style="background:var(--pavonearse)"></span> Pavonearse</span>
+      <span class="chip"><span class="dot" style="background:var(--serpentear)"></span> Serpentear</span>
+    </div>
+  </header>
+
+  <nav class="sticky">
+    <div class="container navwrap">
+      <a href="#resumen">Resumen</a>
+      <a href="#verbos">Verbos</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#mapas">Mapas</a>
+      <a href="#diagramas">Diagramas</a>
+      <a href="#descargas">Descargas</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="resumen" class="two">
+      <div>
+        <h2>Resumen</h2>
+        <div class="card">
+          <p>Estudio semántico-cognitivo y dialectológico sobre verbos denominales derivados de animales en español. Se analizan extensiones de significado, rasgos transferidos del dominio <em>animal</em> al <em>humano</em>, y la distribución geográfica y temporal de su uso en corpus. Este sitio acompaña la ponencia y concentra visualizaciones y materiales.</p>
+          <ul>
+            <li>Enfoque: prototipos y extensiones radiales (Lakoff, Brugman, Langacker).</li>
+            <li>Datos: CORPES, Spanish News Classification (Kaggle), spanish-corpora (GitHub), ejemplos propios.</li>
+            <li>Productos: mapas por país, líneas de tiempo, redes semánticas, ejemplos de uso.</li>
+          </ul>
+        </div>
+      </div>
+      <aside>
+        <h2>Cómo navegar</h2>
+        <div class="card">
+          <p>Explora los <strong>verbos</strong>, revisa la <strong>metodología</strong>, entra a los <strong>mapas</strong> y <strong>diagramas</strong>. Cada bloque incluye embeds o links hacia visualizaciones interactivas (Datawrapper, HTML propio, etc.).</p>
+          <p class="muted">Nota: “viborear” también se registra como <span class="kbd">vivorear</span> en variantes regionales de México.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="verbos">
+      <h2>Verbos analizados</h2>
+      <div class="grid cols-3">
+        <div class="verb-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--pavonearse)" stroke-width="1.5"><path d="M12 20c3-4 3-8-1-10 1-3 6-3 7 0 1 3-1 6-6 10Z" fill="var(--pavonearse)"/></svg>
+          <div><strong style="color:var(--pavonearse)">Pavonearse</strong><br><span class="muted">Ostentación; despliegue visible</span></div>
+        </div>
+        <div class="verb-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--viborear)" stroke-width="1.5"><path d="M4 12c2-3 6-3 8 0s6 3 8 0" fill="none"/></svg>
+          <div><strong style="color:var(--viborear)">Viborear</strong> <span class="muted">/ Vivorear</span><br><span class="muted">Hablar con malicia o traición</span></div>
+        </div>
+        <div class="verb-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="var(--cotorrear)"><path d="M7 20c3 0 5-2 5-5V6c0-2-3-2-3 0v3H6a2 2 0 0 0-2 2v2c0 4 1 7 3 7Z"/></svg>
+          <div><strong style="color:var(--cotorrear)">Cotorrear</strong><br><span class="muted">Hablar mucho y de forma informal</span></div>
+        </div>
+        <div class="verb-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="var(--zorrear)"><path d="M3 12c3-3 6-5 9-5s6 2 9 5c-5 1-9 2-18 0Z"/></svg>
+          <div><strong style="color:var(--zorrear)">Zorrear</strong><br><span class="muted">Astucia; connotaciones sociales variables</span></div>
+        </div>
+        <div class="verb-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="var(--serpentear)"><path d="M4 7c2-2 4-2 6 0s4 2 6 0 4-2 4 0-2 4-4 6-4 2-6 0-4-2-6 0"/></svg>
+          <div><strong style="color:var(--serpentear)">Serpentear</strong><br><span class="muted">Avanzar en ondas o zigzag</span></div>
+        </div>
+      </div>
+      <div class="legend" style="margin-top:16px">
+        <span class="chip"><span class="dot" style="background:var(--pavonearse)"></span> Pavonearse</span>
+        <span class="chip"><span class="dot" style="background:var(--viborear)"></span> Viborear / Vivorear</span>
+        <span class="chip"><span class="dot" style="background:var(--cotorrear)"></span> Cotorrear</span>
+        <span class="chip"><span class="dot" style="background:var(--zorrear)"></span> Zorrear</span>
+        <span class="chip"><span class="dot" style="background:var(--serpentear)"></span> Serpentear</span>
+      </div>
+    </section>
+
+    <section id="metodologia" class="two">
+      <div>
+        <h2>Metodología</h2>
+        <div class="card">
+          <ol>
+            <li><strong>Definición de rasgos</strong> del animal (movimiento, conducta, valoración social).</li>
+            <li><strong>Mapeo semántico</strong> de extensiones metafóricas y metonímicas.</li>
+            <li><strong>Extracción de ocurrencias</strong> y ejemplos en corpus (todas las conjugaciones).</li>
+            <li><strong>Normalización</strong> por millón de palabras y <em>time series</em>.</li>
+            <li><strong>Dialectología</strong>: distribución por país y registro.</li>
+          </ol>
+          <p class="muted">Esta sección puede enlazar notebooks o documentación técnica.</p>
+        </div>
+      </div>
+      <aside>
+        <h2>Datasets</h2>
+        <div class="card">
+          <ul>
+            <li>CORPES XXI (RAE)</li>
+            <li>Spanish News Classification (Kaggle)</li>
+            <li>spanish-corpora (GitHub / josecannete)</li>
+          </ul>
+          <p>Incluye todas las <strong>conjugaciones</strong> (indicativo, subjuntivo e imperativo) y variantes ortográficas (<span class="kbd">viborear</span>/<span class="kbd">vivorear</span>).</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="mapas">
+      <h2>Mapas interactivos</h2>
+      <div class="grid cols-3">
+        <figure class="embed"><figcaption>Embed Datawrapper – Frecuencia por país</figcaption></figure>
+        <figure class="embed"><figcaption>Embed Datawrapper – Tendencias temporales</figcaption></figure>
+        <figure class="embed"><figcaption>Embed – Mapa de calor por registro</figcaption></figure>
+      </div>
+      <p style="margin-top:12px" class="muted">Reemplaza los contenedores por <code>&lt;iframe&gt;</code> de tus gráficos (Datawrapper u otros).</p>
+    </section>
+
+    <section id="diagramas" class="two">
+      <div>
+        <h2>Diagramas semánticos</h2>
+        <div class="card">
+          <p>Inserta aquí tus <strong>diagramas radiales</strong> y redes de rasgos (HTML interactivo propio). Puedes usar <code>&lt;iframe src="diagramas/animal-verbs.html"&gt;</code> para incrustarlos.</p>
+          <div class="embed" style="margin-top:10px"><span>Embed – Red semántica (HTML propio)</span></div>
+        </div>
+      </div>
+      <aside>
+        <h2>Notas</h2>
+        <div class="card">
+          <p>Define criterios de anotación y ejemplos canónicos por verbo. Señala límites de interpretación y variación regional.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="descargas">
+      <h2>Descargas</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Resumen extendido (PDF)</strong>
+          <p class="muted">Próximamente.</p>
+        </div>
+        <div class="card">
+          <strong>Diapositivas (HTML/Reveal)</strong>
+          <p class="muted">Próximamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="card">
+        <p>¿Comentarios o colaboración? Escríbenos:</p>
+        <ul>
+          <li><strong>Betsy Castillo</strong> – <span class="kbd">correo@ejemplo.com</span></li>
+          <li><strong>Dinorah Montiel</strong> – <span class="kbd">correo@ejemplo.com</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="y"></span> Animal Verbs — De cotorrear a viborear. Hecho con ❤ por Betsy & Dinorah.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
