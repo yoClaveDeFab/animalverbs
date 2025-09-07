@@ -205,7 +205,7 @@
 
       <!-- MAPA -->
       <div class="card embed" aria-label="Mapa de distribución dialectal de 'cotorrear'">
-        <iframe title="Cotorrear" aria-label="Mapa" id="datawrapper-chart-epHZF"
+        <iframe aria-label="Mapa" id="datawrapper-chart-epHZF"
           src="https://datawrapper.dwcdn.net/epHZF/7/"
           scrolling="no" frameborder="0"
           style="width:0; min-width:100% !important; border:none;"
@@ -228,7 +228,7 @@
     <div class="stack">
       <!-- Diagrama interactivo con color del cotorro -->
       <div class="card" aria-label="Diagrama prototípico interactivo de 'cotorrear'" style="position:relative">
-        <div id="tip" style="position:absolute;display:none;pointer-events:none;background:#fff;color:#111;padding:10px 12px;border-radius:10px;font:14px/1.4 Inter, sans-serif;max-width:340px;border:1px solid #e5e7eb;box-shadow:0 6px 20px rgba(0,0,0,.12)"></div>
+        
         <svg id="cotorrear-svg" viewBox="0 0 960 560" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img">
           <defs>
             <style>
@@ -258,10 +258,7 @@
           </g>
 
           <!-- senses with tooltips -->
-          <g id="g-relajo" class="hot" data-example="si iba a andar en eso quería hacerlo en serio, que corría el mismo peligro por una maleta que por un cargamento, ¿Lo sabe tu padre?, No, ni siquiera sospecha porque sigo yendo a la escuela, ¿Qué estudias?, Agronomía, pero es como si no estudiara, sólo voy a cotorrear, la semana que entra empiezan los exámenes finales y no los voy a presentar, Carvajal Quintero lo miraba muy serio, conocía a su padre y no deseaba causarle trastornos, aunque era cierto que si el chico andaba metido y no tenía protección le podría ir peor: a la policía le encantaban los chivos expiatorios,">
-            <ellipse class="ring" cx="710" cy="370" rx="160" ry="110"/>
-            <text class="label" x="660" y="375">Echar relajo</text>
-          </g>
+          <text class="label" x="640" y="360">Echar relajo</text>
 
           <g id="g-bromear" class="hot" data-example="Mientras cotorrea sin compasión, el Zamuro deja caer su ala sobre el hombro de la necesitada y le palmotea suavemente la espalda. Por supuesto introduce sus delgados dedos entre la cabellera de la viejecita y la acaricia como lo hacía Mamá Dolores con Albertico Limonta en la comedia &quot;El Derecho de Nacer&quot;.">
             <ellipse class="ring" cx="800" cy="430" rx="130" ry="90"/>
@@ -273,63 +270,28 @@
             <text class="label" x="815" y="265">Engañar</text>
           </g>
 
-          <g id="g-gritar" class="hot" data-example="Desde pequeños, los niños se baten el cobre y las niñas cotorrean. También en el siglo xxi el modelo social, la cultura heredada, la predisposición genética y el mundo imaginario que construyen el cine y la televisión, configuran el que los niños sean tan simples y agresivos como un holograma de sus arquetipos —Schwarzenneger, Stallone, Van Damme—, mientras que las chicas han de ser muy">
-            <ellipse class="ring" cx="700" cy="270" rx="70" ry="50"/>
-            <text class="label" x="675" y="275">Gritar</text>
-          </g>
+          <text class="label" x="690" y="275">Gritar</text>
         </svg>
       </div>
+<p style="margin:8px 0 0; color:#6b7280; font-size:0.95rem">Prototipo: núcleo ‘cotorro’ → hablar animadamente; extensiones: echar relajo, bromear, engañar.</p>
 
       <!-- Notas morfológicas y semánticas (sin links) -->
-      <div class="card">
-        <h4 style="margin:0 0 6px">Notas morfológicas y semánticas</h4>
-        <ul style="margin:0; padding-left:18px">
-          <li>Derivado denominal: <em>cotorro</em> + <strong>-ear</strong> (valores de <em>iteratividad</em> y <em>habitualidad</em>).</li>
-          <li>Proyección conceptual: rasgos del ave (ruido, gregariedad) → conversación animada/chisme.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      
+<div class="card">
+  <h4 style="margin:0 0 6px">Notas morfológicas y semánticas</h4>
+  <ul style="margin:0; padding-left:18px">
+    <li>Derivado denominal: <em>cotorro</em> + <strong>-ear</strong>.</li>
+    <li>Valores aspectuales (durativa / habitual): 
+      <ul style="margin:6px 0 0 0; padding-left:18px">
+        <li>“… <strong>cotorreando</strong> todo el día …”</li>
+        <li>“… según que <strong>cotorreando</strong> … tres días seguidos …”</li>
+        <li>“… hablando por teléfono y <strong>cotorreando</strong> …”</li>
+      </ul>
+    </li>
+    <li>Proyección conceptual: rasgos del ave (ruido, gregariedad) → conversación animada / chisme.</li>
+  </ul>
 </div>
 
-<script>
-(function(){
-  // Tooltips for diagram
-  const svg = document.getElementById('cotorrear-svg');
-  const tip = document.getElementById('tip');
-  function showTip(text, x, y){
-    tip.textContent = text;
-    tip.style.left = (x + 12) + 'px';
-    tip.style.top = (y + 12) + 'px';
-    tip.style.display = 'block';
-  }
-  function hideTip(){ tip.style.display = 'none'; }
-  svg.querySelectorAll('.hot').forEach(el=>{
-    el.addEventListener('mousemove', (e)=>{ showTip(el.getAttribute('data-example'), e.clientX, e.clientY); });
-    el.addEventListener('mouseleave', hideTip);
-  });
-})();
-</script>
-
-          </div>
-
-          <div class="stack">
-            <div class="card embed" aria-label="Diagrama prototípico de 'cotorrear'">
-              <img src="img/cotorrear-prototipo.png"
-                alt="Prototipo: núcleo 'cotorro' → hablar animadamente; extensiones: echar relajo, bromear, gritar, engañar"
-                style="width:100%; height:auto; display:block">
-            </div>
-
-            <div class="card">
-              <h4 style="margin:0 0 6px">Notas morfológicas y semánticas</h4>
-              <ul style="margin:0; padding-left:18px">
-                <li>Derivado denominal: <em>cotorro</em> + <strong>-ear</strong> (<em>iteratividad</em>, <em>habitualidad</em>).</li>
-                <li>Proyección: rasgos del ave (ruido, gregariedad) → conversación animada/chisme.</li>
-              </ul>
-              <div style="margin-top:10px" class="kpi">
-                
-                
-              </div>
             </div>
           </div>
         </div>
